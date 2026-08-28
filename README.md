@@ -1,4 +1,4 @@
-# velos-api · Ressources fournies
+# velos-api · API de stations de velos
 
 > Ces fichiers sont le **point de départ** du projet. Tu les copies dans ton dossier de travail `velos-api`, puis tu les versionnes. Tu n'as pas à réécrire ce code : ce n'est pas ce qui est évalué.
 
