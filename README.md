@@ -18,3 +18,7 @@
 ## Ce qui n'est pas fourni, et qui est à toi
 
 Le fichier d'exclusion Git, la recette de construction de l'image, le fichier d'exclusion de construction, le fichier de composition de la pile, les manifestes du cluster, les tests et la description du pipeline. Autrement dit : **tout ce qui a été appris pendant trois jours**.
+
+## Objectif du projet
+
+Rendre velos-api livrable, reproductible et deployable avec Git, Docker, Kubernetes et Jenkins.
