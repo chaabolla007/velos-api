@@ -22,3 +22,5 @@ Le fichier d'exclusion Git, la recette de construction de l'image, le fichier d'
 ## Objectif du projet
 
 Rendre velos-api livrable, reproductible et deployable avec Git, Docker, Kubernetes et Jenkins.
+
+Pipeline CI/CD déclenché automatiquement par les changements Git.
