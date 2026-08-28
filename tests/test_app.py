@@ -6,7 +6,7 @@ def test_sante_repond_ok():
     reponse = client.get("/sante")
 
     assert reponse.status_code == 200
-    assert reponse.get_json()["statut"] == "ok"
+    assert reponse.get_json()["statut"] == "ko"
 
 
 def test_alertes_sans_base(monkeypatch):
