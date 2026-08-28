@@ -78,6 +78,18 @@ def disponibilite():
     return jsonify({"source": source, "taux_occupation": taux})
 
 
+
+@app.get("/alertes")
+def alertes():
+    donnees, source = lire_stations()
+    stations_en_alerte = [
+        station
+        for station in donnees
+        if station["velos_disponibles"] <= 2
+    ]
+    return jsonify({"source": source, "alertes": stations_en_alerte})
+
+
 # ---------------------------------------------------------------------------
 # A TOI DE JOUER (jalon 3 de l'enonce)
 #
