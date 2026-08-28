@@ -54,7 +54,7 @@ Les secrets ne doivent jamais entrer dans l'historique Git, même s'ils sont sup
 | Situation | Durée mesurée |
 | --- | --- |
 | Construction avec les dépendances copiées après le code | environ 6,0 s |
-| Construction avec les dépendances installées avant le code | <à mesurer> |
+| Construction avec les dépendances installées avant le code |  0m2.3s |
 
 Dans la version naïve du Dockerfile, `COPY . .` était exécuté avant l'installation des dépendances. Une simple modification de `app.py` invalidait donc le cache et relançait `pip install`, qui prenait environ 4,9 secondes.
 
@@ -65,7 +65,7 @@ Dans la version optimisée, `requirements.txt` est copié et les dépendances so
 | Version | Taille |
 | --- | --- |
 | Version naïve, un seul étage | 209 MB de Disk Usage, 51.4 MB de Content Size |
-| Version finale, plusieurs étages | <à mesurer> |
+| Version finale, plusieurs étages |  0m2.3s |
 
 **Ce que le fichier d'exclusion de construction évite d'envoyer :**  
 Le fichier `.dockerignore` empêche Docker d'envoyer dans le contexte de construction des éléments inutiles ou sensibles, notamment `.git`, les environnements virtuels Python, les fichiers compilés, les fichiers `.env`, les clés, les fichiers des éditeurs et les métadonnées Windows.
